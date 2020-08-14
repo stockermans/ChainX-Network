@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Staking Calculator for ChainX">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Chainx.Network</title>
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+  <div id="loading"></div>
+
+<div id="layout">
+  <a href="#menu" id="menuLink" class="menu-link">
+    <span></span>
+  </a>
+  <div id="menu">
+    <div class="pure-menu">
+
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a id="goData" onclick="openNetwork(true)"  class="pure-menu-link">Network</a></li>
+            <li class="pure-menu-item"><a id="goCalc" onclick="openCalc(true)" class="pure-menu-link">Calculator</a></li>
+            <li class="pure-menu-item"><a href="https://chainx.org" target="_blank" class="pure-menu-link">Chainx.org</a></li>
+            <li class="pure-menu-item"><a href="https://telemetry.polkadot.io/#list/ChainX" target="_blank" class="pure-menu-link">Telemetry</a></li>
+            <li class="pure-menu-item"><a  class="pure-menu-link">Exxibox</a></li>
+
+        </ul>
+    </div>
+  </div>
+
+
+  <div id="content" style="display:none;">
+  <img src="img/logo.png" style="margin-bottom:50px;">
+    
+    <div id="calculatorData" style="display:none;">
+        <h2 class="content-head is-center">Polkadot Parachain - Staking Calculator</h2>
+        <p class="post-meta">
+          <a class="post-category post-category-design">Income</a> <a class="post-category post-category-pure">Proof of Stake</a> <a class="post-category post-category-js">Polkadot</a> <a class="post-category post-category-yui">Parachain</a>
+        </p>
+
+      <div class="pure-g">
+
+          <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
+            
+            <div style="overflow-x:auto;">
+              <h4>Amount of PCX Staking</h4>
+              <form class="pure-form">
+                <input id="stakingAmount" placeholder="Amount of PCX" value=1000 type="number">
+              </form>
+              <h4>Earnings</h4>
+              <table class="pure-table pure-table-horizontal">
+                  <thead>
+                      <tr>
+                          <th>PCX/USD</th>
+                          <th>Daily</th>
+                          <th>Monthly</th>
+                          <th>Yearly</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                        <td id="priceTd"></td>
+                        <td id="dailyEarning"></td>
+                        <td id="monthlyEarning"></td>
+                        <td id="yearlyEarning"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td id="dailyUsd"></td>
+                        <td id="monthlyUsd"></td>
+                        <td id="yearlyUsd"></td>
+                      </tr>
+                  </tbody>
+              </table>
+            </div>
+            <div style="overflow-x:auto;margin-top:20px;">
+              <table class="pure-table pure-table-horizontal">
+                  <thead>
+                      <tr>
+                          <th>Mining %</th>
+                          <th>Staking %</th>
+                          <th>Daily %</th>
+                          <th>% APY</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                        <td id="miningDistroTd"></td>
+                        <td id="reservedStakingTd"></td>
+                        <td id="dailyTd"></td>
+                        <td id="yearlyTd"></td>
+                      </tr>
+                  </tbody>
+              </table>
+            </div>
+            <h4>Mining Distribution % </h4>
+            <div class="slidecontainer">
+              <input type="range" min="1" max="100" value="50" class="slider" id="miningDistribution">
+            </div>
+            <h4>Reserved Staking Ratio </h4>
+            <div class="slidecontainer">
+              <input type="range" min="1" max="100" value="50" class="slider" id="reservedStakingRange">
+            </div>
+          </div>
+
+
+
+
+      </div>
+  </div>
+    <div id="networkData">
+        <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
+
+        <h2 class="content-head is-center">Polkadot ChainX Network Data</h2>
+        <p class="post-meta">
+          <a class="post-category post-category-design">Network</a> <a class="post-category post-category-js">Polkadot</a> <a class="post-category post-category-yui">Parachain</a>
+        </p>
+
+
+        <h4>Global Polkadot ChainX Network Data</h4>
+
+        <div style="overflow-x:auto">
+          <table class="pure-table pure-table-horizontal">
+              <thead>
+                  <tr>
+                      <th>Total</th>
+                      <th>Reserved Staking</th>
+                      <th>Reserved DEX</th>
+                      <th>Free</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr id="tableDataChainX">
+                  </tr>
+              </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+</body>
+<script src="js/routie.js"></script>
+
+<script src="js/calc.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/menu.js"></script>
+
+</html>
