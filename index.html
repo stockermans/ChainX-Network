@@ -17,37 +17,17 @@
   <div id="loading"></div>
 
 <div id="layout">
-  <a href="#menu" id="menuLink" class="menu-link">
-    <span></span>
-  </a>
-  <div id="menu">
-    <div class="pure-menu">
-
-        <ul class="pure-menu-list">
-            <li class="pure-menu-item"><a id="goData" onclick="openNetwork(true)"  class="pure-menu-link">Network</a></li>
-            <li class="pure-menu-item"><a id="goCalc" onclick="openCalc(true)" class="pure-menu-link">Calculator</a></li>
-            <li class="pure-menu-item"><a href="https://chainx.org" target="_blank" class="pure-menu-link">Chainx.org</a></li>
-            <li class="pure-menu-item"><a href="https://telemetry.polkadot.io/#list/ChainX" target="_blank" class="pure-menu-link">Telemetry</a></li>
-            <li class="pure-menu-item"><a  class="pure-menu-link">Exxibox</a></li>
-
-        </ul>
-    </div>
-  </div>
-
 
   <div id="content" style="display:none;">
   <img src="img/logo.png" style="margin-bottom:50px;">
-    
-    <div id="calculatorData" style="display:none;">
-        <h2 class="content-head is-center">Polkadot Parachain - Staking Calculator</h2>
-        <p class="post-meta">
-          <a class="post-category post-category-design">Income</a> <a class="post-category post-category-pure">Proof of Stake</a> <a class="post-category post-category-js">Polkadot</a> <a class="post-category post-category-yui">Parachain</a>
-        </p>
 
+    <div id="calculatorData">
+      <h2 class="content-head is-center">Polkadot Parachain - Staking Calculator</h2>
+      <p class="post-meta">
+        <a class="post-category post-category-design">Income</a> <a class="post-category post-category-pure">Proof of Stake</a> <a class="post-category post-category-js">Polkadot</a> <a class="post-category post-category-yui">Parachain</a>
+      </p>
       <div class="pure-g">
-
           <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
-            
             <div style="overflow-x:auto;">
               <h4>Amount of PCX Staking</h4>
               <form class="pure-form">
@@ -108,23 +88,15 @@
               <input type="range" min="1" max="100" value="50" class="slider" id="reservedStakingRange">
             </div>
           </div>
-
-
-
-
       </div>
-  </div>
-    <div id="networkData">
+    </div>
+    <div id="networkData" class="margin-top">
         <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
-
         <h2 class="content-head is-center">Polkadot ChainX Network Data</h2>
         <p class="post-meta">
           <a class="post-category post-category-design">Network</a> <a class="post-category post-category-js">Polkadot</a> <a class="post-category post-category-yui">Parachain</a>
         </p>
-
-
         <h4>Global Polkadot ChainX Network Data</h4>
-
         <div style="overflow-x:auto">
           <table class="pure-table pure-table-horizontal">
               <thead>
@@ -143,15 +115,9 @@
         </div>
       </div>
     </div>
-
-
   </div>
 </div>
 </body>
 <script src="js/routie.js"></script>
-
 <script src="js/calc.js"></script>
-<script src="js/ui.js"></script>
-<script src="js/menu.js"></script>
-
 </html>
